@@ -1,138 +1,32 @@
-/* General Reset */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Set a basic font and color scheme */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    position: relative; /* Ensures the content stays on top of the video */
-    z-index: 1; /* Ensures text and other content layers above video */
-}
-
-/* Background Video */
-#bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the whole screen */
-    z-index: -1; /* Sends the video behind the content */
-}
-
-/* Header */
-header {
-    padding: 20px;
-    text-align: center;
-    z-index: 1;
-}
-
-header h1 {
-    font-size: 2em;
-}
-
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    z-index: 1;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 15px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Added hover effect */
-}
-
-/* Main Content */
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    z-index: 1;
-}
-
-.card {
-    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency to allow background visibility */
-    width: 30%;
-    margin: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card h2 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-}
-
-.card p {
-    font-size: 1em;
     color: #333;
 }
 
-/* Footer */
-footer {
+/* Style the header */
+header {
+    background-color: #f2f2f2;
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
+    text-align: center;
 }
 
-footer p {
-    font-size: 1em;
+/* Style the sections */
+section {
+    padding: 20px;
 }
 
-/* Media Queries for responsiveness */
-@media screen and (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 80%;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    footer p {
-        font-size: 0.9em;
+/* Make the website responsive */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    header, section {
+        padding: 10px;
     }
 }
